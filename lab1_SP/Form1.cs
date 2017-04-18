@@ -83,7 +83,7 @@ namespace lab1_SP
                 }
                 arr_St[i] = a0 / 2 + sum;
 
-                chartSignal.Series[1].Points.AddXY(i - (T/2), arr_St[i] - (Emax / 2));
+                chartSignal.Series[1].Points.AddXY(i - (T/2D), arr_St[i] - (Emax / 2.0D));
             }
 			/*
             chartAmplitude.ChartAreas[0].AxisX.Minimum = 0;
@@ -112,10 +112,10 @@ namespace lab1_SP
             chartSignal.ChartAreas[0].AxisX.Minimum = ((T/2) * (-1)) - 1;
             chartSignal.ChartAreas[0].AxisX.Maximum = (T/2) + 1;
 
-            chartSignal.Series[0].Points.AddXY((T/2) * (-1), Emax / 2);
+            chartSignal.Series[0].Points.AddXY((T/2) * (-1), Emax / 2D);
             chartSignal.Series[0].Points.AddXY(0, 0);
             chartSignal.Series[0].Points.AddXY(0, Emax);
-            chartSignal.Series[0].Points.AddXY(T / 2, Emax / 2);
+            chartSignal.Series[0].Points.AddXY(T / 2, Emax / 2D);
         }
     }
 }
