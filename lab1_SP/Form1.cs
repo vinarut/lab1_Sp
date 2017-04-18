@@ -109,12 +109,13 @@ namespace lab1_SP
             chartSignal.Series[0].Color = Color.Black;
             chartSignal.Series[0].BorderWidth = 2;
             chartSignal.Series[1].BorderWidth = 2;
-            chartSignal.ChartAreas[0].AxisX.Minimum = -1;
-            chartSignal.ChartAreas[0].AxisX.Maximum = T + 1;
+            chartSignal.ChartAreas[0].AxisX.Minimum = ((T/2) * (-1)) - 1;
+            chartSignal.ChartAreas[0].AxisX.Maximum = (T/2) + 1;
 
+            chartSignal.Series[0].Points.AddXY((T/2) * (-1), Emax / 2);
             chartSignal.Series[0].Points.AddXY(0, 0);
             chartSignal.Series[0].Points.AddXY(0, Emax);
-            chartSignal.Series[0].Points.AddXY(T, 0);
+            chartSignal.Series[0].Points.AddXY(T / 2, Emax / 2);
         }
     }
 }
