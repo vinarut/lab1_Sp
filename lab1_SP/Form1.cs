@@ -83,7 +83,7 @@ namespace lab1_SP
                 }
                 arr_St[i] = a0 / 2 + sum;
 
-                chartSignal.Series[1].Points.AddXY(i, arr_St[i]);
+                chartSignal.Series[1].Points.AddXY(i - (T/2), arr_St[i]);
             }
 			/*
             chartAmplitude.ChartAreas[0].AxisX.Minimum = 0;
