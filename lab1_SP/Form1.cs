@@ -23,7 +23,11 @@ namespace lab1_SP
         //const int ti = 116; //длительность импульсов
         const int T = 100;  //период
         
-
+		
+		public static double bn(int n) {
+			return (Emax * Math.cos(Math.PI * n)) / (Math.PI * n);
+		}
+		
         public static void myMethod(double err)
         {
             double Pc = (Emax * Emax) + ((Emax * Emax) / 12);
