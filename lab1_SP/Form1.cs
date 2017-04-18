@@ -18,15 +18,15 @@ namespace lab1_SP
         }
 
         static int n = 0;
-        const int Emax = 5;
-        const double a0 = Emax;
-        const int ti = 116; //длительность импульсов
-        const int T = 232;  //период
+        const int Emax = 25;
+        const double a0 = 2 * Emax;
+        //const int ti = 116; //длительность импульсов
+        const int T = 100;  //период
         
 
         public static void myMethod(double err)
         {
-            double Pc = Math.Pow(Emax, 2) / 2;
+            double Pc = (Emax * Emax) + ((Emax * Emax) / 12);
             double Pf = 0;
             double sumAn = 0;
             double An;
@@ -39,7 +39,7 @@ namespace lab1_SP
                 
                 for (int i = 1; i <= n; i++)
                 {
-                    An = Math.Sqrt(Math.Pow(Emax / (i * Math.PI) * (1 - Math.Cos(i * Math.PI)), 2));
+                    An = (Emax * Math.cos(Math.PI * n)) / (Math.PI * n);
                     sumAn += Math.Pow(An, 2);
                 }
                 sumAn /= 2;
