@@ -25,7 +25,7 @@ namespace lab1_SP
         
 		
 		public static double bn(int n) {
-			return (Emax * Math.cos(Math.PI * n)) / (Math.PI * n);
+			return (Emax * Math.Cos(Math.PI * n)) / (Math.PI * n);
 		}
 		
         public static void myMethod(double err)
