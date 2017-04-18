@@ -43,7 +43,7 @@ namespace lab1_SP
                 
                 for (int i = 1; i <= n; i++)
                 {
-                    An = (Emax * Math.cos(Math.PI * n)) / (Math.PI * n);
+                    An = bn(i);
                     sumAn += Math.Pow(An, 2);
                 }
                 sumAn /= 2;
