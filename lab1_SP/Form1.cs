@@ -68,24 +68,24 @@ namespace lab1_SP
             myMethod(error);
 
             double[] arr_bn = new double[n];
-            double[] arr_St = new double[ti];
+            double[] arr_St = new double[T];
             double sum = 0;
 
             for (int i = 0; i < n; i++)
-                arr_bn[i] = Emax / ((i + 1) * Math.PI) * (1 - Math.Cos((i + 1) * Math.PI));
+                arr_bn[i] = bn(i + 1);
 
-            for (int i = 0; i < ti; i++)
+            for (int i = 0; i < T; i++)
             {
                 sum = 0;
                 for (int j = 0; j < n; j++)
                 {
-                    sum += arr_bn[j] * Math.Sin((j + 1) * 2 * Math.PI / T * i);
+                    sum += arr_bn[j] * Math.Sin(((j + 1) * 2 * Math.PI * i) / T);
                 }
                 arr_St[i] = a0 / 2 + sum;
 
                 chartSignal.Series[1].Points.AddXY(i, arr_St[i]);
             }
-
+			/*
             chartAmplitude.ChartAreas[0].AxisX.Minimum = 0;
             chartAmplitude.ChartAreas[0].AxisX.Maximum = n - 1;
             chartAmplitude.Series[1].Color = Color.BlueViolet;
@@ -99,7 +99,7 @@ namespace lab1_SP
                 chartAmplitude.Series[1].Points.AddXY(i, Fi[i]);
                 chartAmplitude.Series[0].Points.AddXY(i, An[i]);
             }            
-
+			*/
             tbN.Text = n.ToString();
         }
 
